@@ -28,6 +28,8 @@ const Filter = {
   Koefs = [-0.1, 0.2, 0.5]
 };
 
+const Patherns = [];
+
 const Filters = [Filter];
 
 const SelectedElements = [];
@@ -61,5 +63,8 @@ const Card = {
   CardId = 0
 };
 
-
+const History = {
+  States = [Card],
+  CurrentState = 0
+}
 
