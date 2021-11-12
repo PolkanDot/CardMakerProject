@@ -23,16 +23,9 @@ const CardSize = {
   Width = 1000
 }
 
-const Filter = {
-  FilterName = 'Oslo',
-  Koefs = [-0.1, 0.2, 0.5]
-};
-
-const Patherns = [];
-
-const Filters = [Filter];
-
 const SelectedElements = [];
+
+const States = [Card]
 
 const ImageObj = {
   Coordinates = Coordinates,
@@ -53,18 +46,9 @@ const Background = {
 
 const Card = {
   DisplayList = [0],
-  Images = [ImageObj],
-  Texts = [],
-  Arts = [],
+  Objects = [ImageObj],
   Field = Field,
   Background = Background,
   Size = CardSize,
-  CardName = 'New card',
-  CardId = 0
+  CardName = 'New card'
 };
-
-const History = {
-  States = [Card],
-  CurrentState = 0
-}
-
