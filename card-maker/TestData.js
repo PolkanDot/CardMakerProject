@@ -1,60 +1,27 @@
-const ImgCoordinates = {
-  x : 100,
-  y : 100
-};
-
-const FieldCoordinates = {
-  x: 0,
-  y: 0
-};
-
-const ArtCoordinates = {
-  x: 700,
-  y: 300
-};
-
-const TextCoordinates = {
-  x: 500,
-  y: 100,
-};
-
-const ImgSize = {
-  Height : 50,
-  Width : 50
-};
-
-const TextSize = {
-  Height: 30,
-  Width: 100
-};
-
-const ArtSize = {
-  Height: 100,
-  Width: 100
-};
-
-const FieldSize = {
-  Height: 0,
-  Width: 0
-};
-
-const CardSize = {
-  Height: 1500,
-  Width: 1000
-};
-
-const SelectedElement = [];
+const SelectedElement = null;
 
 const ImageElement = {
-  Coordinates: ImgCoordinates,
-  Size: ImgSize,
+  Coordinates: {
+    Height: 100,
+    Width: 100
+  },
+  Size: {
+    x: 50,
+    y: 50
+  },
   ElementId: 0,
   ImgData: "/9j/4AAQSkZJRgABAQEBLAEsAAD / 2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgrBZf//Z"
 };
 
 const TextElement = {
-  Coordinates: TextCoordinates,
-  Size: TextSize,
+  Coordinates: {
+    x: 500,
+    y: 100
+  },
+  Size: {
+    Height: 30,
+    Width: 100
+  },
   ElementId: 1,
   TextData: "Hello World!",
   TextSize: 20,
@@ -66,15 +33,27 @@ const TextElement = {
 };
 
 const ArtElement = {
-  Coordinates: ArtCoordinates,
-  Size: ArtSize,
+  Coordinates: {
+    x: 700,
+    y:300
+  },
+  Size: {
+    Height: 100,
+    Width: 100
+  },
   ElementId: 2,
   ArtData: "wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgrBZf"
 };
 
 const Field = {
-  Size: FieldSize,
-  Coordinates: FieldCoordinates
+  Size: {
+    Height: 0,
+    Width: 0
+  },
+  Coordinates: {
+    x: 0,
+    y: 0
+  }
 };
 
 const Background = {
@@ -87,7 +66,10 @@ const Card = {
   Objects: [ImageElement, TextElement, ArtElement],
   Field: Field,
   Background: Background,
-  Size: CardSize,
+  Size: {
+    Height: 1500,
+    Width: 1000
+  },
   CardName: 'New card'
 };
 
@@ -97,7 +79,7 @@ const MakerHistory = {
 };
 
 const CardMaker = {
-  SelectedElements: SelectedElements,
+  SelectedElements: SelectedElement,
   Patherns: [],
   Card: Card,
   MakerHisory: MakerHistory 
