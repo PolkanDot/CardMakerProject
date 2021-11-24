@@ -1,82 +1,76 @@
 /**
  * Создать новую карточку
+ * 
  * @param {CardMaker} cardMaker - текущее состояние модели
+ * @param {Card} defaultCard - стандартная карточка
  * @returns {CardMaker} - модель с дефолтной карточкой
  */
-function createNewCard(cardMaker) { 
+function createNewCard(cardMaker, defaultCard) { 
   return newCardMaker
 }
-
 /**
- * Удаление карточки
+ * Применение шаблона
  * 
  * @param {CardMaker} cardMaker - текущее состояние модели
- * @returns {CardMaker} - модель с нулевой карточкой
- */
-function deleteCard(cardMaker) { } 
-  return newCardMaker
-
-/**
- * Применение фильтра
- * 
  * @param {Patherns} patherns - массив всех доступных шаблонов
- * @param {Card} card - текущая карточка
- * @param {string} pathernName - имя применяемой карточки
+ * @param {String} pathernName - имя применяемой карточки
  * @returns {CardMaker} - модель с новой карточкой (шаблоном)
  */
-function usePathern(card, patherns, pathernName) {}
+function usePathern(cardMaker, patherns, pathernName) {
   return newCardMaker
+}
 /**
-* Выделяение области
+* Выделение области
 *
-* @param {Field} field - нулевая область
-* @param {Coordinates} newCoordinates - координаты области
-* @param {Size} newSize - рамеры области
+* @param {CardMaker} cardMaker - текущее состояние модели
+* @param {Field} newField - нулевая область
 * @returns {CardMaker} - модель с новой областью
 */
-function selectField(field, newCoordinates, newSize) {
-    return newCardMaker;
+function selectField(cardMaker, newField) {
+    return newCardMaker
 }
 
 /**
 * Перемещение области
 *
-* @param {Field} field - область
-* @param {Coordinates} newCoordinates - координаты области
+* @param {CardMaker} cardMaker - текущее состояние модели
+* @param {Field} newField - область
 * @returns {CardMaker} - модель с новыми координатами области
 */
-function moveField(field, newCoordinates) {
+function moveField(field, newField) {
     return newCardMaker;
 }
 
 /**
 * Обрезание по выделенной области
 *
+* @param {CardMaker} cardMaker - текущее состояние модели
 * @param {Field} field - область
 * @returns {CardMaker} - модель с обрезанной карточкой
 */
-function cropField(field) {
+function cropField(cardMaker, field) {
     return newCardMaker;
 }
 /**
 * Удаление выбранной области
 *
-* @param {Field} Field - область
+* @param {CardMaker} cardMaker - текущее состояние модели
+* @param {Field} field - область
 * @returns {CardMaker} - изменённое приложение
 */
-function deleteField(cardMaker, Field) {
+function deleteField(cardMaker, field) {
     return newCardMaker;
 }
 
 /**
 * Вставка текста
 *
-* @param {cardMaker} cardMaker - исходное приложение
-* @param {Text} text - текст
-* @param {Coordinates} Coordinates - расположение
+* @param {CardMaker} cardMaker - исходное приложение
+* @param {Elements} elements - массив обьектов
+* @param {TextElement} textElement - текстовый элемент
 * @returns {newCardMaker} - изменённое приложение
 */
-function insertText(cardMaker, text, Coordinates) {
+function insertText(cardMaker, textElement, elements) {
     return newCardMaker;
 }
 
@@ -96,8 +90,7 @@ function changeSizeText(cardMaker, text, size) {
 * Изменение цвета текста
 *
 * @param {cardMaker} cardMaker - исходное приложение
-* @param {text} text - текст
-* @param {color} color - цвет текста
+* @param {newNext} - измененный текстовый элемент
 * @returns {newNext} - новый текст, {newCardMaker} - изменённое приложение
 */
 function changeColorText(cardMaker, text, color) {
