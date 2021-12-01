@@ -28,8 +28,7 @@ const TextElement = {
   Font: "Arial",
   Italic: False,
   FontThickness: 0,
-  Color: "000000",
-  Background: null
+  Color: "000000"
 };
 
 const ArtElement = {

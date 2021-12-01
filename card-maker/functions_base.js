@@ -5,7 +5,7 @@
  * @param {Card} defaultCard - стандартная карточка
  * @returns {CardMaker} - модель с дефолтной карточкой
  */
-function createNewCard(cardMaker, defaultCard) { 
+function createCard(cardMaker, defaultCard) { 
   return newCardMaker
 }
 /**
