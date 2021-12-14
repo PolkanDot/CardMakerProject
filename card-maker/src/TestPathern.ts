@@ -26,11 +26,12 @@ const TestImageElement: ImageElement = {
 const TestTextElement: TextElement = {
     type: 'text',
     content: 'Whats up, man',
-    font: 'Calibri',
+    fontFamily: 'Calibri',
     fontSize: 20,
     fontColor: '#000000',
     fontStyle: false,
-    fontThickness: 1,
+    fontThickness: false,
+    fontDecoration: false
 };
 
 const TestArtElement: ArtElement = {

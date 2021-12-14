@@ -31,11 +31,12 @@ export type Element = {
 export type TextElement = {
     type: 'text',
     content: string,
-    font: string,
+    fontFamily: string,
     fontSize: number,
     fontColor: string,
     fontStyle: boolean,
-    fontThickness: number,
+    fontThickness: boolean,
+    fontDecoration: boolean
 }; 
 
 export type ArtElement = {
