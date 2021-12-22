@@ -1,28 +1,27 @@
 import elementStyles from '../Element.module.css';
-import { Element, TextElement  } from '../../../Types';
+import {TextElement} from '../../../Types';
 
 type TextElementProps = {
-    textElement: Element,
+    textElement: TextElement,
 }
 
-function TextElement(props: TextElementProps) {
-    if (props.textElement.content.type == 'text') {
-        const style = {
-            left: props.textElement.position.x,
-            top: props.textElement.position.y,
-            width: props.textElement.elementSize.width,
-            heigth: props.textElement.elementSize.height,
-            color: props.textElement.content.fontColor,
-            fontSize: props.textElement.content.fontSize,
-            fontWeight: props.textElement.content.fontThickness ? 700 : 400,
-            textDecoration: props.textElement.content.fontDecoration ? 'underline' : 'none',
-            fontStyle: props.textElement.content.fontStyle ? 'italic' : 'normal',
-            fontFamily: props.textElement.content.fontFamily
-        } 
-}
-    return (
-        <span className={elementStyles.Element} style={style}>{props.textElement.text}</span>
-    );
+function FunText(props: TextElementProps) {
+    const style = {
+        left: props.textElement.position.x,
+        top: props.textElement.position.y,
+        width: props.textElement.elementSize.width,
+        heigth: props.textElement.elementSize.height,
+        color: props.textElement.fontColor,
+        fontSize: props.textElement.fontSize,
+        fontWeight: props.textElement.fontThickness ? 700 : 400,
+        textDecoration: props.textElement.fontDecoration ? 'underline' : 'none',
+        fontStyle: props.textElement.fontStyle ? 'italic' : 'normal',
+        fontFamily: props.textElement.fontFamily
+    }
+
+        return (
+            <span className={elementStyles.element} style={style}>{props.textElement.content}</span>
+        );       
 }
 
-export default TextElement;
+export default FunText;
