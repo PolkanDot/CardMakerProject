@@ -1,71 +1,72 @@
 export type Coordinates = {
-    x: number,
-    y: number
+    readonly x: number,
+    readonly y: number
 };
 
 export type Size = {
-    width: number,
-    height: number
+    readonly width: number,
+    readonly height: number
 };
 
 export type SelectedElement = number;
 
 export type ImageElement = {
-    type: 'img',
-    src: string
-};
+    readonly type: 'img',
+    readonly src: string
+} & BaseElement;
 
 export type Background = {
-    color: string
+    readonly color: string
 } | {
-    src: string
+    readonly src: string
 };
 
-export type Element = {
-    elementId: number,
-    position: Coordinates,
-    elementSize: Size,
-    content: TextElement | ImageElement | ArtElement,
-};
+export type BaseElement ={
+    readonly elementId: number,
+    readonly position: Coordinates,
+    readonly elementSize: Size,
+}
+
+export type Element = TextElement | ImageElement | ArtElement
 
 export type TextElement = {
-    type: 'text',
-    content: string,
-    fontFamily: string,
-    fontSize: number,
-    fontColor: string,
-    fontStyle: boolean,
-    fontThickness: boolean,
-    fontDecoration: boolean
-}; 
+    readonly type: 'text',
+    readonly content: string,
+    readonly fontFamily: string,
+    readonly fontSize: number,
+    readonly fontColor: string,
+    readonly fontStyle: boolean,
+    readonly fontThickness: boolean,
+    readonly fontDecoration: boolean
+} & BaseElement; 
 
 export type ArtElement = {
-    type: 'art',
-    src: string 
-};
+    readonly type: 'art',
+    readonly src: string 
+} & BaseElement;
 
 export type Field = {
-    position: Coordinates,
-    elementSize: Size
+    readonly position: Coordinates,
+    readonly fieldSize: Size
 };
 
 export type Card = {
-    displayList: number[],
-    objects: Element[],
-    field: Field,
-    background: Background,
-    cardSize: Size,
-    cardName: string
+    readonly displayList: number[],
+    readonly objects: Element[],
+    readonly field: Field,
+    readonly background: Background,
+    readonly cardSize: Size,
+    readonly cardName: string
 };
 
 export type MakerHistory = {
-    states: Card[],
-    index: number
+    readonly states: Card[],
+    readonly index: number
 };
 
 export type CardMaker = {
-    selectedElement: SelectedElement,
-    patherns: Card[],
-    card: Card,
-    makerHistory: MakerHistory
+    readonly selectedElement: SelectedElement,
+    readonly patherns: Card[],
+    readonly card: Card,
+    readonly makerHistory: MakerHistory
 };
