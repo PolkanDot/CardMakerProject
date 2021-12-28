@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import FunCardMaker from './CardMaker/CardMaker';
+import './index.css'
 import { TestCardMaker } from './TestPathern';
 
 
