@@ -1,3 +1,6 @@
 .cardMaker{
-   margin: 0 auto; 
+   margin: 0 auto;
+   padding-top: 150px;
+   height: 100%; 
+   background: #D9D0C1;
 }
