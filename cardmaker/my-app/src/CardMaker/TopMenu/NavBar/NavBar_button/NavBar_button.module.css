@@ -1,0 +1,17 @@
+.navbar__button
+{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Exo 2', sans-serif;
+    color: #454438;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+
+.navbar__button:hover
+{
+    background: #D9D0C1;
+}

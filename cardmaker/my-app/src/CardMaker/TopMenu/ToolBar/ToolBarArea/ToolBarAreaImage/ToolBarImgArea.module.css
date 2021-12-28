@@ -1,0 +1,29 @@
+span
+{
+    font: 400 14px "Roboto Slab";
+    font-family: 'Exo 2', sans-serif;
+    color: #454438;
+}
+
+.comp_label
+{
+    width: 15%;
+    font: 400 14px "Roboto Slab";
+    font-family: 'Exo 2', sans-serif;
+    color: #454438;
+    text-align: center;
+    background-color: #000;
+}
+
+.comp_label:hover
+{
+    cursor: pointer;
+}
+.input
+{
+    display: none;
+}
+.url
+{
+    width: 30%
+}

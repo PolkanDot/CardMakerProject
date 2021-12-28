@@ -1,0 +1,92 @@
+.toolbar__area
+{
+    border-right: 1px solid #838169;
+    height: 80px;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+.row
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.toolbar_label
+{
+    text-align: center;
+    font: 400 12px "Roboto Slab";
+    font-family: 'Exo 2', sans-serif;
+    color: #454438;
+}
+
+.toolbar__text
+{
+    border-right: 1px solid #454438;
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.toolbar__text_button,
+.toolbar__text_fontfamily,
+.toolbar__text_fontsize
+{
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #454438;
+    border-radius: 2px;
+    height: 22px;
+    background: #F1EEFF;
+}
+.toolbar__text_fontfamily
+{
+    width:100%
+}
+
+.toolbar__text_button:hover,
+.toolbar__text_font-family:hover,
+.toolbar__text_font-size:hover
+{
+    color: #c1b49c;
+    background: #D9D0C1;
+}
+
+.toolbar__text_button
+{
+    width: 22px;
+}
+
+.bold 
+{
+    background-position: center;
+    background-image: url("../../../../icons/bold.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+.italic 
+{
+    background-position: center;
+    background-image: url("../../../../icons/italic.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+
+.toolbar__text_font-family
+{
+    width: 100%;
+    color: #454438;
+}
+
+.toolbar__text_font-size
+{
+    font: 400 14px "Roboto Slab";
+    font-family: 'Exo 2', sans-serif;
+    color: #454438;
+}
