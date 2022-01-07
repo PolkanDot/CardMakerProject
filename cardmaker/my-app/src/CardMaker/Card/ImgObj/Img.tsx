@@ -6,17 +6,18 @@ type ImageElementProps = {
     imageElement: ImageElement,
 }
 
-function FunImg(props: ImageElementProps) {
+export default function Image(props: ImageElementProps, z_index: number) {
     const style = {
         left: props.imageElement.position.x,
         top: props.imageElement.position.y,
         width: props.imageElement.elementSize.width,
-        height: props.imageElement.elementSize.height
+        height: props.imageElement.elementSize.height,
+        zIndex: z_index
     }       
     return (
-        <img src={props.imageElement.src as string} className={elementStyles.element} style={style} />
+        <div className={elementStyles.element} style={style}>
+            <img src={props.imageElement.src} style={style} />
+        </div>
     );
     
 }
-
-export default FunImg;

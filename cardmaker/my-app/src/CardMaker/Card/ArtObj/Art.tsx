@@ -6,16 +6,17 @@ type ArtElementProps = {
     artElement: ArtElement,
 }
 
-function FunArt(props: ArtElementProps) {
+export default function Art(props: ArtElementProps, z_index: number) {
     const style = {
         left: props.artElement.position.x,
         top: props.artElement.position.y,
         width: props.artElement.elementSize.width,
         height: props.artElement.elementSize.height,
+        zIndex: z_index
     }
     return (
-        <img src={props.artElement.src as string} className={elementStyles.element} style={style} />
+        <div className={elementStyles.element} style={style} >
+            <img src={props.artElement.src} style={style} />
+        </div>
     );
 }
-
-export default FunArt;

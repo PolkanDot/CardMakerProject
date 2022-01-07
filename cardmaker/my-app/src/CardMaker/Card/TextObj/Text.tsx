@@ -1,14 +1,13 @@
 import elementStyles from '../Element.module.css';
 import {TextElement} from '../../../Types';
+import { isAbsolute } from 'path/posix';
 
 type TextElementProps = {
     textElement: TextElement,
 }
 
-function FunText(props: TextElementProps) {
+export default function Text(props: TextElementProps, z_index: number) {
     const style = {
-        left: props.textElement.position.x,
-        top: props.textElement.position.y,
         width: props.textElement.elementSize.width,
         heigth: props.textElement.elementSize.height,
         color: props.textElement.fontColor,
@@ -18,10 +17,17 @@ function FunText(props: TextElementProps) {
         fontStyle: props.textElement.fontStyle ? 'italic' : 'normal',
         fontFamily: props.textElement.fontFamily
     }
+    const divStyle = {
+        left: props.textElement.position.x,
+        top: props.textElement.position.y,
+        width: props.textElement.elementSize.width,
+        heigth: props.textElement.elementSize.height,
+        zIndex: z_index
+    }
 
         return (
-            <span className={elementStyles.element} style={style}>{props.textElement.content}</span>
+            <div className={elementStyles.element} style={divStyle}>
+                <span style={style}>{props.textElement.content}</span>
+            </div>
         );       
 }
-
-export default FunText;
