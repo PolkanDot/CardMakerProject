@@ -1,28 +1,11 @@
 .toolbar__area
 {
     border-right: 1px solid #838169;
-    height: 80px;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.toolbar__back_area
-{
-    border-right: 1px solid #838169;
     height: 65px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding-bottom: 5px;
-}
-.toolbar__area_image
-{
-    border-right: 1px solid #838169;
-    width: 70%;
-    height: 60px; 
-    display: flex;
-    flex-direction: column;
 }
 .size_object_area
 {
@@ -78,25 +61,4 @@
     width: 120%;
     height: 120%;
     padding: 2px
-}
-.comp_label
-{
-    width: 15%;
-    font: 400 14px "Roboto Slab";
-    font-family: 'Exo 2', sans-serif;
-    color: #454438;
-    text-align: center;
-}
-
-.comp_label:hover
-{
-    cursor: pointer;
-}
-.input
-{
-    display: none;
-}
-.url
-{
-    width: 40%
 }

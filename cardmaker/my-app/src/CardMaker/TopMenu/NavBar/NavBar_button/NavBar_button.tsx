@@ -4,7 +4,7 @@ type StringProps = {
     str: string,
 }
 
-export default function FunNavBarButton(props: StringProps) {
+export default function NavBarButton(props: StringProps) {
     return (
         <button className={style.navbar__button}>
             {props.str}

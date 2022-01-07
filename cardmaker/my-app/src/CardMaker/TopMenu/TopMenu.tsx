@@ -1,14 +1,12 @@
 import style from './TopMenu.module.css';
-import FunNavBar from './NavBar/NavBar';
-import FunToolBar from './ToolBar/ToolBar';
+import NavBar from './NavBar/NavBar';
+import ToolBar from './ToolBar/ToolBar';
 
-function FunTopMenu() {
+export default function TopMenu() {
     return (
         <header className={style.header}>
-            <FunNavBar />
-            <FunToolBar />
+            <NavBar />
+            <ToolBar />
         </header>     
     );
 }
-
-export default FunTopMenu

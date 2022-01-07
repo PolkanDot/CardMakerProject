@@ -1,0 +1,16 @@
+.size_canvas_area
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 5px 0 5px;
+    width: 50%
+}
+.size_canvas_span
+{
+    font-size: 12px;
+}
+.size_canvas_input
+{
+    font-size: 12px;
+}

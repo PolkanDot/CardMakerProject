@@ -1,9 +1,13 @@
-import style from '../TollBarArea.module.css'
+import gStyle from '../TollBarArea.module.css'
+import style from './ToolBarAreaText.module.css'
+import bold from '../../../../../icons/work_icons/bold.svg'
+import italic from '../../../../../icons/work_icons/italic.svg'
+import underline from '../../../../../icons/work_icons/underline.svg'
 
-export default function FunToolBarTextArea() {
+export default function ToolBarTextArea() {
     return (
-        <div className={style.toolbar__area}>
-            <div className={style.row}>
+        <div className={gStyle.toolbar__area}>
+            <div className={gStyle.row}>
                 <select name="" id="" className={style.toolbar__text_fontfamily}>
                     <option value="">Calibri</option>
                     <option value="">Arial</option>
@@ -14,18 +18,19 @@ export default function FunToolBarTextArea() {
                     <option value="">16</option>
                 </select>
             </div>
-            <div className={style.row}>
-                <button className={style.toolbar__text_button + ' ' + style.bold} >
+            <div className={gStyle.row}>
+                <button className={style.toolbar__text_button} >
+                    <img className={gStyle.botton__img} src={bold} alt="" />
                 </button>
-                <button className={style.toolbar__text_button + ' ' + style.italic}>
+                <button className={style.toolbar__text_button}>
+                    <img className={gStyle.botton__img} src={italic} alt="" />
                 </button>
-                <button className={style.toolbar__text_button + ' ' + style.underline}>
-                </button>
-                <button className={style.toolbar__text_button + ' ' + style.crossed_out}>
+                <button className={style.toolbar__text_button}>
+                    <img className={gStyle.botton__img} src={underline} alt="" />
                 </button>
                 <input type="color" className={style.toolbar__text_button} />
             </div>
-            <h2 className={style.toolbar_label}>Текст</h2>
+            <h2 className={gStyle.toolbar_label}>Текст</h2>
         </div>
     )
 }

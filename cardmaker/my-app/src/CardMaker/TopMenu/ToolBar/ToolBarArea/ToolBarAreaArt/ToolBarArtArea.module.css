@@ -1,0 +1,16 @@
+.tool_bar__art__default_art{
+    width: 100%;
+    height: 90%
+}
+.tool_bar__art__default_art_button
+{
+    height: 40px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.tool_bar__art__default_art_button:hover
+{
+    background-color: #D9D0C1;
+}

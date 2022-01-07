@@ -1,20 +1,20 @@
 import style from './ToolBar.module.css'
-import FunToolBarTextArea from './ToolBarArea/ToolBarAreaText/ToolBarTextArea'
-import FunToolBarImgArea from './ToolBarArea/ToolBarAreaImage/ToolBarImgArea'
-import FunToolBarArtArea from './ToolBarArea/ToolBarAreaArt/ToolBarArtArea'
-import FunToolBarObjectArea from './ToolBarArea/ToolBarAreaObject/ToolBarAreaObject'
-import FunToolBarCanvasArea from './ToolBarArea/ToolBarAreaCanvas/ToolBarAreaCanvas'
-import FunToolBarBackArea from './ToolBarArea/ToolBarAreaBack/ToolBarAreaBack'
+import ToolBarTextArea from './ToolBarArea/ToolBarAreaText/ToolBarTextArea'
+import ToolBarImgArea from './ToolBarArea/ToolBarAreaImage/ToolBarImgArea'
+import ToolBarArtArea from './ToolBarArea/ToolBarAreaArt/ToolBarArtArea'
+import ToolBarObjectArea from './ToolBarArea/ToolBarAreaObject/ToolBarAreaObject'
+import ToolBarCanvasArea from './ToolBarArea/ToolBarAreaCanvas/ToolBarAreaCanvas'
+import ToolBarBackArea from './ToolBarArea/ToolBarAreaBack/ToolBarAreaBack'
 
-export default function FunToolBar() {
+export default function ToolBar() {
     return (
         <div className={style.toolbar}>
-            <FunToolBarTextArea />  
-            <FunToolBarImgArea />
-            <FunToolBarArtArea />
-            <FunToolBarObjectArea/>
-            <FunToolBarCanvasArea/>
-            <FunToolBarBackArea/>
+            <ToolBarTextArea />  
+            <ToolBarImgArea />
+            <ToolBarArtArea />
+            <ToolBarObjectArea />
+            <ToolBarCanvasArea/>
+            <ToolBarBackArea/>
         </div>
     )
 }    

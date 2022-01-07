@@ -1,15 +1,15 @@
 import style from './NavBar.module.css'
-import FunNavBarButton from './NavBar_button/NavBar_button'
+import NavBarButton from './NavBar_button/NavBar_button'
 
-export default function FunNavBar(){
+export default function NavBar(){
     return (
         <nav className = {style.navbar}>
-            <FunNavBarButton str={"Открыть"}/>
-            <FunNavBarButton str={"Создать"}/>
-            <FunNavBarButton str={"Сохранить как"} />
-            <FunNavBarButton str={"Загрузить шаблон"} />
-            <FunNavBarButton str={"Отменить изменение"} />
-            <FunNavBarButton str={"Вернуть изменение"} />
+            <NavBarButton str={"Открыть"}/>
+            <NavBarButton str={"Создать"}/>
+            <NavBarButton str={"Сохранить как"} />
+            <NavBarButton str={"Загрузить шаблон"} />
+            <NavBarButton str={"Отменить изменение"} />
+            <NavBarButton str={"Вернуть изменение"} />
         </nav>
     )    
 }
