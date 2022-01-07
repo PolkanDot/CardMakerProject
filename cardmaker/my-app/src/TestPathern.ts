@@ -5,7 +5,6 @@ import {
     Field,
     ArtElement,
     TextElement,
-    Element,
     Background,
     ImageElement,
     SelectedElement
@@ -15,7 +14,8 @@ import {
 const TestSelectedElement: SelectedElement = 0
 
 const TestBackground: Background = {
-    color: "#FFFFFF"
+    type: 'color',
+    color: "green"
 };
 
 const TestImageElement: ImageElement = {
@@ -32,11 +32,11 @@ const TestImageElement: ImageElement = {
     src: 'https://images.pexels.com/photos/36767/tree-natur-nightsky-cloud.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940%27'
 };
 
-const TestTextElement: TextElement = {
+const TestTextElement1: TextElement = {
     elementId: 3,
     position: {
         x: 500,
-        y: 500
+        y: 300
     },
     elementSize: {
         height: 100,
@@ -52,6 +52,26 @@ const TestTextElement: TextElement = {
     fontDecoration: false
 };
 
+const TestTextElement2: TextElement = {
+    elementId: 4,
+    position: {
+        x: 500,
+        y: 100
+    },
+    elementSize: {
+        height: 100,
+        width: 100
+    },
+    type: 'text',
+    content: 'Whats up, woman',
+    fontFamily: 'Arial',
+    fontSize: 25,
+    fontColor: 'red',
+    fontStyle: true,
+    fontThickness: true,
+    fontDecoration: true
+};
+
 const TestArtElement: ArtElement = {
     elementId: 2,
     position: {
@@ -59,7 +79,7 @@ const TestArtElement: ArtElement = {
         y: 300
     },
     elementSize: {
-        height: 113,
+        height: 150,
         width: 300
     },
     type: 'art',
@@ -78,8 +98,8 @@ const TestField: Field = {
 };
 
 export const TestCard: Card = {
-    displayList: [1, 2, 3],
-    objects: [TestTextElement, TestImageElement, TestArtElement],
+    displayList: [1, 3, 4, 2],
+    objects: [TestTextElement1, TestTextElement2, TestImageElement, TestArtElement],
     field: TestField,
     background: TestBackground,
     cardSize: {

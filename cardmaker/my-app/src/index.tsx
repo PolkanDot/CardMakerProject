@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FunCardMaker from './CardMaker/CardMaker';
+import Editor from './CardMaker/CardMaker';
 import './index.css'
 import { TestCardMaker } from './TestPathern';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <FunCardMaker cardMaker={TestCardMaker}/>
+    <Editor cardMaker={TestCardMaker}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

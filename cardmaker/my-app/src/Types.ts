@@ -16,8 +16,10 @@ export type ImageElement = {
 } & BaseElement;
 
 export type Background = {
+    readonly type: 'color',
     readonly color: string
 } | {
+    readonly type: 'src',
     readonly src: string
 };
 
