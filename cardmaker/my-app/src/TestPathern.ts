@@ -35,8 +35,8 @@ const TestImageElement: ImageElement = {
 const TestTextElement1: TextElement = {
     elementId: 3,
     position: {
-        x: 500,
-        y: 300
+        x: 370,
+        y: 250
     },
     elementSize: {
         height: 100,
@@ -55,7 +55,7 @@ const TestTextElement1: TextElement = {
 const TestTextElement2: TextElement = {
     elementId: 4,
     position: {
-        x: 500,
+        x: 300,
         y: 100
     },
     elementSize: {
@@ -75,7 +75,7 @@ const TestTextElement2: TextElement = {
 const TestArtElement: ArtElement = {
     elementId: 2,
     position: {
-        x: 300,
+        x: 250,
         y: 300
     },
     elementSize: {
@@ -98,7 +98,7 @@ const TestField: Field = {
 };
 
 export const TestCard: Card = {
-    displayList: [1, 3, 4, 2],
+    displayList: [3, 1, 4, 2],
     objects: [TestTextElement1, TestTextElement2, TestImageElement, TestArtElement],
     field: TestField,
     background: TestBackground,

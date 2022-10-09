@@ -1,5 +1,5 @@
 import styles from './Card.module.css';
-import { Card, Element, TextElement, ImageElement, ArtElement } from '../../Types';
+import { Card, Element} from '../../Types';
 import CardBackground from './CardBackground/CardBackground';
 import Text from './TextObj/Text';
 import Image from './ImgObj/Img';
@@ -11,26 +11,28 @@ type cardProps = {
 
 function ChoosingElementType(objects: Element[], currentId: number, zIndex: number) {
     let i = 0
-    while ( objects[i].elementId != currentId) {
+    while (objects[i].elementId !== currentId) {
         i++;
     }
-    if (objects[i].elementId == currentId) {
+    if (objects[i].elementId === currentId) {
         const element = objects[i]
         switch (element.type) {
             case 'text':
-                return <Text key={element.elementId} textElement={element} />;
+                return <Text key={element.elementId} textElement={element} z_index={zIndex}/>;
             case 'img':
-                return <Image key={element.elementId} imageElement={element} />;
+                return <Image key={element.elementId} imageElement={element} z_index={zIndex}/>;
             case 'art':
-                return <Art key={element.elementId} artElement={element} />;
+                return <Art key={element.elementId} artElement={element} z_index={zIndex}/>;
         }
     }
 }
 
 function Z_Indexation(displayList: number[], objects: Element[]){
+    let tags = []
     for (var i = 0; i < displayList.length; i++) {
-        return ChoosingElementType(objects, displayList[i], i)
+        tags.push(ChoosingElementType(objects, displayList[i], i))
     }
+    return tags
 }
 
 export default function Canvas(props: cardProps) {

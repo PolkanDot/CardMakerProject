@@ -1,12 +1,12 @@
 import elementStyles from '../Element.module.css';
 import {TextElement} from '../../../Types';
-import { isAbsolute } from 'path/posix';
 
 type TextElementProps = {
-    textElement: TextElement,
+    textElement: TextElement, 
+    z_index: number
 }
 
-export default function Text(props: TextElementProps, z_index: number) {
+export default function Text(props: TextElementProps) {
     const style = {
         width: props.textElement.elementSize.width,
         heigth: props.textElement.elementSize.height,
@@ -22,7 +22,7 @@ export default function Text(props: TextElementProps, z_index: number) {
         top: props.textElement.position.y,
         width: props.textElement.elementSize.width,
         heigth: props.textElement.elementSize.height,
-        zIndex: z_index
+        zIndex: props.z_index
     }
 
         return (
